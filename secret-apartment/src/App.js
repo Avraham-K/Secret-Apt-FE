@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import { BrowserRouter, Route, Routes, Navigate, Link } from "react-router-dom";
+
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalContext } from "./context/global-context";
 import Landing from "./pages/landing";
 import Main from "./pages/main";
 import Notification from "./pages/notification";
 import NavigationBar from "./components/navbar";
+
 
 function App() {
   const [users, setusers] = useState([]);
@@ -21,7 +23,7 @@ function App() {
       <Route path="/notification" element={<Notification />} />
 
       </Routes>
-      </BrowserRouter>
+</BrowserRouter>
 
      
       </div>
