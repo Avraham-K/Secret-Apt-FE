@@ -1,9 +1,16 @@
 import React from 'react'
+import Card from './card-main-page'
+import Filter from './filter-main-page'
+import Listings from './listings-main-page'
+import './main.css'
 
-function Main() {
+export default function Main() {
   return (
-    <div>main</div>
+    <center className="Main-Page-Wrapper">
+        <Filter/>
+        {/* <Card /> */}
+        <Listings/>
+    </center>
   )
 }
 
-export default Main;

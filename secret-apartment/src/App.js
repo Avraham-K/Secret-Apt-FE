@@ -6,7 +6,6 @@ import Main from "./pages/main";
 import Notification from "./pages/notification";
 import NavigationBar from "./components/navbar";
 
-
 function App() {
   const [apartment, setApartment] = useState([]);
   
