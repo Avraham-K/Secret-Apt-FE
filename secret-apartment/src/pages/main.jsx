@@ -4,6 +4,7 @@ import Filter from './filter-main-page'
 import Listings from './listings-main-page'
 import './main.css';
 import { GlobalContext } from "../context/global-context";
+import ApartmentCardList from '../components/apartmentCardList';
 
 
 export default function Main() {
@@ -13,7 +14,7 @@ export default function Main() {
     <center className="Main-Page-Wrapper">
         <Filter/>
         {/* <Card /> */}
-        <Listings/>
+        <ApartmentCardList />
     </center>
   )
 }

@@ -4,8 +4,7 @@ import { searchByNeighborhood } from "../utils/userServices";
 import "./filter.css";
 
 export default function Filter() {
-  const { neighborhoods, setNeighborhoods } = useContext(GlobalContext);
-  console.log("DASFASFDASFSFASF", neighborhoods)
+  const { neighborhoods, setNeighborhoods, setNeighborRes } = useContext(GlobalContext);
   
   const [querys, setQuerys] = useState({});
 
@@ -14,9 +13,9 @@ export default function Filter() {
 }, [neighborhoods])
   
 
-const  gimmiBaseNeighborhood = async () => {
+const gimmiBaseNeighborhood = async () => {
    const result = await searchByNeighborhood(neighborhoods)
-   console.log("NEIGHBORHOOD", result)
+   setNeighborRes(result);
 }
 
   const handleSubmit = async (querys) => {
@@ -28,7 +27,7 @@ const  gimmiBaseNeighborhood = async () => {
         rooms: null,
         size: null,
         type: null});
-    console.log("DID IT GET THERE?", querys);
+    // console.log("DID IT GET THERE?", querys);
     const result = "await search(querys);"
     if (result.length === 0) {
       console.log(result);
