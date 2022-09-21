@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalContext } from "./context/global-context";
-import Landing from "./pages/landing";
+import Home from "./pages/home";
 import Main from "./pages/main";
 import Notification from "./pages/notification";
 import NavigationBar from "./components/navbar";
 
 
 function App() {
-  const [users, setusers] = useState([]);
+  const [apartment, setApartment] = useState([]);
   
   return (
   
-    <GlobalContext.Provider value={{users, setusers}}>
+    <GlobalContext.Provider value={{apartment, setApartment}}>
       <div className="main-container">
       <BrowserRouter>
       <NavigationBar />
       <Routes>
-      <Route path="/" element={<Landing />} />
+      <Route path="/" element={<Home />} />
       <Route path="/main" element={<Main />} />
       <Route path="/notification" element={<Notification />} />
 
