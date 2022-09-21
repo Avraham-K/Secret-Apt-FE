@@ -8,7 +8,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="home-page-container">
+    <div className="landingPageContainer">
       <div className="home-page-header">
         <h1 className="display-1 mt-4">Secret Apartments</h1>
       </div>
@@ -19,7 +19,7 @@ function Home() {
         </button>
       </div>
       <div className="home-img-container">
-        <img src={logo} alt="house-image" className="home-house-img" />
+        {/* <img src={logo} alt="house-image" className="home-house-img" /> */}
       </div>
     </div>
   );

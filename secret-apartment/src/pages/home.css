@@ -1,26 +1,28 @@
 .home-page-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
 }
 
 .home-page-search-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 59vh;
 }
 
 .search-button {
-  font-size: 22px;
-  width: 10vw;
-  height: 7vh;
-  background-color: #B1B2FF;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  margin-left: 5px;
+    font-size: 22px;
+    width: 10vw;
+    height: 7vh;
+    background-color: #b1b2ff;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin-left: 5px;
 }
 
 .home-img-container {
@@ -29,8 +31,17 @@
     justify-content: center;
     margin-top: 4vh;
 }
+.landingPageContainer {
+    background-image: url(https://i.pinimg.com/originals/a2/5e/f1/a25ef15e657431260dc9b070bf76d60f.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    
+}
 
-.home-house-img{
+.home-house-img {
     height: 60vh;
     width: 80vw;
 }
