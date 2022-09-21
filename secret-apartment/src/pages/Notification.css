@@ -5,7 +5,7 @@ justify-content: center;
 }
 
 .notificationContainer {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     width: 90%;
     height: 80vh;
 }
