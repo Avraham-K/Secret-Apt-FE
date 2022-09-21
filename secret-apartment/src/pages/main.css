@@ -1,0 +1,8 @@
+.Main-Page-Wrapper {
+    background-color: #AAC4FF;
+    height: 99vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
