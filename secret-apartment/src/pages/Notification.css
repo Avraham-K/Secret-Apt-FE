@@ -1,0 +1,20 @@
+.mainContainer{
+    display: flex;
+justify-content: center;
+
+}
+
+
+.notificationContainer {
+    width: 90%;
+    height: 80vh;
+    border: 1px solid #AAC4FF;
+    border-radius: 5px;
+}
+
+.filter{
+    margin: 2rem;
+}
+
+/* .form{
+} */
