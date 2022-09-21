@@ -1,0 +1,11 @@
+.search-params-card {
+    width: 80%;
+    border: 1px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #EEF1FF;
+    border-radius: 5px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+    margin-top: 1%;
+    padding: 1%;
+}
