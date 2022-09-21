@@ -3,7 +3,7 @@ import { GlobalContext } from "../context/global-context";
 import { searchByNeighborhood } from "../utils/userServices";
 import "./filter.css";
 
-export default function Filter() {
+export default function Filter( {setAggResults}) {
   const { neighborhoods, setNeighborhoods, setNeighborRes } = useContext(GlobalContext);
   
   const [querys, setQuerys] = useState({});
@@ -19,15 +19,18 @@ const gimmiBaseNeighborhood = async () => {
 }
 
   const handleSubmit = async (querys) => {
-    setQuerys({constructionDate: null,
+    setAggResults(querys)
+    setQuerys({
+        constructionDate: null,
         maxPrice: null,
         minPrice: null,
         parking: null, 
         quality: null,
         rooms: null,
         size: null,
-        type: null});
-    // console.log("DID IT GET THERE?", querys);
+        type: null
+      });
+    console.log("DID IT GET THERE?", querys);
     const result = "await search(querys);"
     if (result.length === 0) {
       console.log(result);
@@ -127,9 +130,7 @@ const gimmiBaseNeighborhood = async () => {
                 setQuerys({ ...querys, quality: e.target.value });
               }}>
 
-            <option disabled selected>
-                Overall Quality
-              </option>
+            <option disabled selected>Overall Construction Quality</option>
               <option value="Very Excellent">
               Very Excellent
               </option>
@@ -157,10 +158,10 @@ const gimmiBaseNeighborhood = async () => {
           </label>
           <label>
             {" "}
-            Constructed as of:
+            Construction year:
             <input
-              type="date"
-              placeholder="constructed as of..."
+              type="text"
+              placeholder="year"
               onChange={(e) => {
                 setQuerys({ ...querys, constructionDate: e.target.value });
               }}
