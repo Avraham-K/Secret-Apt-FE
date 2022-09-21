@@ -1,9 +1,13 @@
 import React from 'react'
+import Geosuggest from 'react-geosuggest';
 
-function landing() {
-  return (
-    <div>landing</div>
-  )
+export default function Landing(){
+
+
+    return(
+        <>
+        <div><h1>WELCOME TO SECRET APARTMENTS</h1></div>
+        <Geosuggest />
+        </>
+    )
 }
-
-export default landing;

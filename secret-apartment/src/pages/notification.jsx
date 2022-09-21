@@ -1,9 +1,9 @@
 import React from 'react'
 
-function notification() {
+function Notification() {
   return (
     <div>notification</div>
   )
 }
 
-export default notification;
+export default Notification;
