@@ -2,8 +2,10 @@ import React from "react";
 import "./home.css";
 import logo from "../images/house.jpg";
 import AutoCompleteInput from "../components/AutoComplete";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
 
   return (
     <div className="home-page-container">
@@ -12,7 +14,7 @@ function Home() {
       </div>
       <div className="home-page-search-container">
         <AutoCompleteInput />
-        <button type="button" className="search-button">
+        <button type="button" className="search-button" onClick={navigate("/main")}>
           Search
         </button>
       </div>
