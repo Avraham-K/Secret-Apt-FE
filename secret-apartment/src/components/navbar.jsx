@@ -8,7 +8,7 @@ function NavigationBar() {
       <ul className="nav-links">
         <li>
           <Link className="link" to="/">
-            Landing
+            Home
           </Link>
         </li>
 
