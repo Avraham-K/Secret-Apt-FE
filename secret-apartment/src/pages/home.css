@@ -18,6 +18,7 @@
   padding: 10px;
   border-radius: 10px;
   font-size: 20px;
+  border: 1px solid;
 }
 
 .search-button {
@@ -28,6 +29,7 @@
   color: white;
   border-radius: 10px;
   border: none;
+  margin-left: 5px;
 }
 
 .home-img-container {
