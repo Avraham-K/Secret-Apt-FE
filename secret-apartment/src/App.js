@@ -5,6 +5,7 @@ import Landing from "./pages/landing";
 import Main from "./pages/main";
 import Notification from "./pages/notification";
 import NavigationBar from "./components/navbar";
+import AutoComplete from "./components/AutoComplete";
 
 function App() {
   const [users, setusers] = useState([]);
