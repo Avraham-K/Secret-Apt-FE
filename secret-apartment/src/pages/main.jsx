@@ -9,7 +9,6 @@ import { GlobalContext } from "../context/global-context";
 export default function Main() {
   const { neighborhoods, setNeighborhoods } = useContext(GlobalContext);
 
-
   return (
     <center className="Main-Page-Wrapper">
         <Filter/>
