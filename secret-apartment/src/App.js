@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalContext } from "./context/global-context";
 import Landing from "./pages/landing";
 import Main from "./pages/main";
-import Notification from "./pages/notification";
+import Notification from "./pages/Notification";
 import NavigationBar from "./components/navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
