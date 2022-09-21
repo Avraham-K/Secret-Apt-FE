@@ -5,7 +5,6 @@ import "./filter.css";
 
 export default function Filter() {
   const { neighborhoods, setNeighborhoods } = useContext(GlobalContext);
-  console.log("DASFASFDASFSFASF", neighborhoods)
   
   const [querys, setQuerys] = useState({});
 

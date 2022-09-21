@@ -1,4 +1,5 @@
 import "./Notification.css";
+import Geomap from "../components/Geomap"
 import { Button, Form, Card } from "react-bootstrap";
 import Filter from "./filter-main-page";
 
@@ -31,6 +32,7 @@ export default function Notification() {
             </div>
           </Form>
           </Card>
+          <Geomap/>
         </div>
       </div>
     </>
