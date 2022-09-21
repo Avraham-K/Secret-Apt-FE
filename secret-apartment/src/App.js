@@ -5,14 +5,13 @@ import Home from "./pages/home";
 import Main from "./pages/main";
 import Notification from "./pages/notification";
 import NavigationBar from "./components/navbar";
-import AutoComplete from "./components/AutoComplete";
 
 function App() {
-  const [apartment, setApartment] = useState([]);
+  const [neighborhoods, setNeighborhoods] = useState([]);
   
   return (
   
-    <GlobalContext.Provider value={{apartment, setApartment}}>
+    <GlobalContext.Provider value={{neighborhoods, setNeighborhoods}}>
       <div className="main-container">
       <BrowserRouter>
       <NavigationBar />
