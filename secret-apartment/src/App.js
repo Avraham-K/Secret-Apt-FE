@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalContext } from "./context/global-context";
 import Landing from "./pages/landing";
@@ -7,8 +7,12 @@ import Notification from "./pages/notification";
 import NavigationBar from "./components/navbar";
 
 function App() {
+  const [users, setusers] = useState([]);
+  
   return (
-    <GlobalContext.Provider value={{}}>
+  
+    <GlobalContext.Provider value={{users, setusers}}>
+      <div>
       <BrowserRouter>
         <NavigationBar />
         <Routes>
@@ -16,9 +20,11 @@ function App() {
           <Route path="/main" element={<Main />} />
           <Route path="/notification" element={<Notification />} />
         </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
+      </div>
     </GlobalContext.Provider>
-  );
+  )
+  
 }
 
 export default App;
