@@ -14,15 +14,15 @@ export default function Main() {
   return (
   
     <center className="Main-Page-Wrapper">
-        <Filter aggResults={aggResults} setAggResults={setAggResults}/>
-        <Card />
-        <ApartmentCardList aggResults={aggResults} setAggResults={setAggResults} />
+        {/* <Card /> */}
+        {/* <ApartmentCardList aggResults={aggResults} setAggResults={setAggResults} /> */}
       <div className='neighborhoods-container'>
       <h1 className='neighborhoods-name display-6'>{neighborhoods} Neighborhood</h1>
       <div className='main-page-autoComplete'>
       <AutoCompleteInput />
       </div>
       </div>
+        <Filter aggResults={aggResults} setAggResults={setAggResults}/>
     </center>
   )
 }
