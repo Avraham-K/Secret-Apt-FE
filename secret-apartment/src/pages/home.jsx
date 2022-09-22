@@ -19,7 +19,6 @@ function Home() {
         </button>
       </div>
       <div className="home-img-container">
-        {/* <img src={logo} alt="house-image" className="home-house-img" /> */}
       </div>
     </div>
   );
