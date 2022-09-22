@@ -1,6 +1,6 @@
 .Main-Page-Wrapper {
     background-color: #D2DAFF;
-    height: 99vh;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 30px;
   }
   
   table {

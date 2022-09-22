@@ -18,7 +18,7 @@ function ApartmentCardList() {
           <tr>
             <th>Rooms</th>
             <th>Bathrooms</th>
-            <th>Apartment area</th>
+            <th>Apartment area (sqft)</th>
             <th>Parking</th>
             <th>Asking Price</th>
             <th>Market Value</th>
