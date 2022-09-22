@@ -23,12 +23,8 @@ export default function AutoCompleteInput() {
 
 const neighborhoodsNames = [
   { label: "Bloomington Heights" },
-  { label: "Bluestem" },
-  { label: "Briardale" },
   { label: "Brookside" },
-  { label: "Clear Creek" },
   { label: "College Creek" },
-  { label: "Crawford" },
   { label: "Edwards" },
   { label: "Gilbert" },
   { label: "Iowa DOT and Rail Road" },
@@ -36,15 +32,12 @@ const neighborhoodsNames = [
   { label: "Mitchell" },
   { label: "North Ames" },
   { label: "Northridge" },
-  { label: "Northpark Villa" },
   { label: "Northridge Heights" },
   { label: "Northwest Ames" },
   { label: "Old Town" },
-  { label: "South & West of Iowa State University" },
   { label: "Sawyer" },
   { label: "Sawyer West" },
   { label: "Somerset" },
   { label: "Stone Brook" },
   { label: "Timberland" },
-  { label: "Veenker" },
 ];
