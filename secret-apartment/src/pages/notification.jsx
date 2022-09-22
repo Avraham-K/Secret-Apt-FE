@@ -14,8 +14,8 @@ export default function Notification() {
     <>
     <center>
       <div className="Main-Page-Wrapper">
-        <div className=" ">
-          <Filter />
+        <div className="mt-5">
+          <Filter table={false} />
           <center className='center'>
         
           <Form className='formCard'>

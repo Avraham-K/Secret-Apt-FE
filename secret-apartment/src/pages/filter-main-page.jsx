@@ -5,9 +5,10 @@ import TextField from "@mui/material/TextField";
 import Select from '@mui/material/Select'
 import "./filter.css";
 import { FormControl, InputLabel } from "@mui/material";
+import ApartmentCardList from "../components/apartmentCardList";
 
 
-export default function Filter( {setAggResults}) {
+export default function Filter( {setAggResults, table=true}) {
   const { neighborhoods, setNeighborhoods, setNeighborRes } = useContext(GlobalContext);
   
   const [querys, setQuerys] = useState({});
@@ -43,7 +44,7 @@ const gimmiBaseNeighborhood = async () => {
   };
 
   return (
-    <div class="filter-main">
+    <div class="notification-top filter-main">
       <form
         id="my-form"
         onSubmit={(e) => {
@@ -242,6 +243,7 @@ const gimmiBaseNeighborhood = async () => {
           Search
         </button>
       </form>
+      {table && <ApartmentCardList />}
     </div>
   );
 }

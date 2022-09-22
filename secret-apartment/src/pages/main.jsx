@@ -21,8 +21,7 @@ export default function Main() {
       </div>
       </div>
         <Filter/>
-        <Card />
-        <ApartmentCardList />
+        {/* <ApartmentCardList /> */}
     </center>
   )
 }
