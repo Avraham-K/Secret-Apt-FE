@@ -20,8 +20,9 @@ function ApartmentCardList() {
             <th>Bathrooms</th>
             <th>Apartment area (sqft)</th>
             <th>Parking</th>
-            <th>Asking Price</th>
-            <th>Market Value</th>
+            <th>Market Value ($)</th>
+            <th>Asking Price ($)</th>
+            <th>%</th>
           </tr>
         </thead>
         <tbody>
@@ -32,25 +33,12 @@ function ApartmentCardList() {
               FullBath={apartment.FullBath}
               GrLivArea={apartment.GrLivArea}
               GarageCars={apartment.GarageCars}
-              SalePrice={apartment.SalePrice}
               marketValue={apartment.marketValue}
+              SalePrice={apartment.SalePrice}
             />
           ))}
         </tbody>
       </table>
-
-      {/* <Row xs={1} md={2} lg={3} xl={4}>
-        {neighborRes.map((apartment) => (
-          <Col key={apartment.Id} >
-            <ApartmentCard
-            SalePrice={apartment.SalePrice}
-            GrLivArea={apartment.GrLivArea}
-            BedroomAbvGr={apartment.BedroomAbvGr}
-            GarageCars={apartment.GarageCars}
-            />
-          </Col>
-        ))}
-      </Row> */}
     </div>
   );
 }
