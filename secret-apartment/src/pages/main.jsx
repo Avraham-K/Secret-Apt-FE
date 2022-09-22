@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import Card from './card-main-page'
 import Filter from './filter-main-page'
-import Listings from './listings-main-page'
 import './main.css';
 import { GlobalContext } from "../context/global-context";
 import ApartmentCardList from '../components/apartmentCardList';

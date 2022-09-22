@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { GlobalContext } from "../context/global-context";
 import { Row, Col } from "react-bootstrap";
 import ApartmentCard from "./apartmentCard";
+import '../pages/main.css';
+
 
 function ApartmentCardList() {
   const { neighborRes = [], setNeighborRes } = useContext(GlobalContext);
@@ -14,12 +16,10 @@ function ApartmentCardList() {
       <table>
         <thead>
           <tr>
-            <th>Neighborhood</th>
-            <th>Street</th>
-            <th>Apartment area</th>
             <th>Rooms</th>
-            <th>Parking</th>
             <th>Bathrooms</th>
+            <th>Apartment area</th>
+            <th>Parking</th>
             <th>Asking Price</th>
             <th>Market Value</th>
           </tr>
@@ -28,12 +28,10 @@ function ApartmentCardList() {
           {neighborRes.map((apartment) => (
             <ApartmentCard
               key={apartment.Id}
-              Neighborhood={apartment.Neighborhood}
-              Street={apartment.Street}
-              GrLivArea={apartment.GrLivArea}
               BedroomAbvGr={apartment.BedroomAbvGr}
-              GarageCars={apartment.GarageCars}
               FullBath={apartment.FullBath}
+              GrLivArea={apartment.GrLivArea}
+              GarageCars={apartment.GarageCars}
               SalePrice={apartment.SalePrice}
             />
           ))}
