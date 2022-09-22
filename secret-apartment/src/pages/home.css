@@ -32,7 +32,7 @@
     margin-top: 4vh;
 }
 .landingPageContainer {
-    background-image: url(https://i.pinimg.com/originals/a2/5e/f1/a25ef15e657431260dc9b070bf76d60f.jpg);
+    background-image: url('../images/house2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
