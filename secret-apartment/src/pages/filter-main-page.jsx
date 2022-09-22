@@ -44,7 +44,7 @@ const gimmiBaseNeighborhood = async () => {
   };
 
   return (
-    <div class="notification-top filter-main">
+    <div class="notification-top filter-main mb-4">
       <form
         id="my-form"
         onSubmit={(e) => {
