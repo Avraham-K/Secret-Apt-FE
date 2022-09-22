@@ -10,6 +10,22 @@
     min-height: 100vh;
 }
 
+.neighborhoods-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 140px;
+    width: 80%;
+}
+
+.neighborhoods-name {
+    margin-top: 70px;
+}
+
+.main-page-autoComplete {
+    margin-top: 70px;
+}
+
 
 /* apartment card list */
 .apartment-results-container {
