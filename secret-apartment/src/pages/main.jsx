@@ -13,9 +13,9 @@ export default function Main() {
   return (
   
     <center className="Main-Page-Wrapper">
-        <Filter/>
+        <Filter aggResults={aggResults} setAggResults={setAggResults}/>
         <Card />
-        <ApartmentCardList />
+        <ApartmentCardList aggResults={aggResults} setAggResults={setAggResults} />
     </center>
   )
 }

@@ -1,15 +1,23 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { GlobalContext } from "../context/global-context";
-import { getEstimatedRealValue, searchByNeighborhood } from "../utils/userServices";
+import { getEstimatedRealValue, getSpecificApartments, searchByNeighborhood } from "../utils/userServices";
 import TextField from "@mui/material/TextField";
 import Select from '@mui/material/Select'
 import "./filter.css";
 import { FormControl, InputLabel } from "@mui/material";
 
-export default function Filter( {setAggResults}) {
+export default function Filter( {aggResults, setAggResults}) {
   const { neighborhoods, setNeighborhoods, setNeighborRes } = useContext(GlobalContext);
-  
-  const [querys, setQuerys] = useState({});
+  const [querys, setQuerys] = useState({
+    constructionDate: null,
+    maxPrice: null,
+    minPrice: null,
+    parking: null, 
+    quality: null,
+    rooms: null,
+    size: null,
+    type: null
+  });
 
   useEffect(() => {
     gimmiBaseNeighborhood()
@@ -21,7 +29,15 @@ const gimmiBaseNeighborhood = async () => {
 }
 
   const handleSubmit = async (querys) => {
-    setAggResults(querys)
+    let searchObj = Object.fromEntries(Object.entries(querys).filter(([_, v]) => v != null));
+    setAggResults(searchObj)
+    console.log("DID IT GET THERE?", searchObj);
+    const result = getSpecificApartments(searchObj)
+    if (result.length === 0) {
+      console.log(result);
+    } else {
+      console.log(result);
+    }
     setQuerys({
         constructionDate: null,
         maxPrice: null,
@@ -32,13 +48,6 @@ const gimmiBaseNeighborhood = async () => {
         size: null,
         type: null
       });
-    console.log("DID IT GET THERE?", querys);
-    const result = getEstimatedRealValue(querys)
-    if (result.length === 0) {
-      console.log(result);
-    } else {
-      console.log(result);
-    }
   };
 
   return (

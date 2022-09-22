@@ -14,9 +14,9 @@ export const searchByNeighborhood = async (Neighborhood) => {
     }
 };
 
-export const getEstimatedRealValue = async () => {
+export const getSpecificApartments = async (searchObj) => {
     try {
-        const resp = await axios.get(`${BASE_URL}/Listing/advanced`);
+        const resp = await axios.post(`${BASE_URL}/Listing/advanced`, searchObj);
         console.log(resp.data);
         return resp.data;
     } catch (err) {

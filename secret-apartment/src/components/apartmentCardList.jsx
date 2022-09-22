@@ -6,7 +6,7 @@ import ApartmentCard from "./apartmentCard";
 import '../pages/main.css';
 
 
-function ApartmentCardList() {
+function ApartmentCardList( {aggResults, setAggResults}) {
   const { neighborRes = [], setNeighborRes } = useContext(GlobalContext);
 
   console.log("neighborRes", neighborRes);
