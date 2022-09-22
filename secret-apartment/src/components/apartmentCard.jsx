@@ -8,6 +8,7 @@ function ApartmentCard(props) {
     BedroomAbvGr,
     GarageCars,
     FullBath,
+    marketValue
   } = props;
 
   return (
@@ -17,7 +18,7 @@ function ApartmentCard(props) {
       <td>{GrLivArea}</td>
       <td>{GarageCars}</td>
       <td>{SalePrice}</td>
-      <td>1</td>
+      <td>{marketValue}</td>
     </tr>
 
     //     <div

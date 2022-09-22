@@ -33,6 +33,7 @@ function ApartmentCardList() {
               GrLivArea={apartment.GrLivArea}
               GarageCars={apartment.GarageCars}
               SalePrice={apartment.SalePrice}
+              marketValue={apartment.marketValue}
             />
           ))}
         </tbody>
