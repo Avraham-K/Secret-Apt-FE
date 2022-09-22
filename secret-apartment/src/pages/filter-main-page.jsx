@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { GlobalContext } from "../context/global-context";
-import { searchByNeighborhood } from "../utils/userServices";
+import { getEstimatedRealValue, searchByNeighborhood } from "../utils/userServices";
 import "./filter.css";
 
 export default function Filter( {setAggResults}) {
@@ -31,7 +31,7 @@ const gimmiBaseNeighborhood = async () => {
         type: null
       });
     console.log("DID IT GET THERE?", querys);
-    const result = "await search(querys);"
+    const result = getEstimatedRealValue(querys)
     if (result.length === 0) {
       console.log(result);
     } else {

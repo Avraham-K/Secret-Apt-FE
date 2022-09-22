@@ -10,20 +10,20 @@ export const searchByNeighborhood = async (Neighborhood) => {
         return resp.data;
     } catch (err) {
         console.log(err);
-        console.log(err.response.data);
+        console.log(err.message);
     }
 };
 
-// export const getLoggedInUser = async () => {
-//     try {
-//         const resp = await axios.get(`${BASE_URL}/users/validate`);
-//         console.log(resp.data);
-//         return resp.data;
-//     } catch (err) {
-//         console.log(err);
-//         successNotice("Sign in or create an account to enjoy our full service!");
-//     }
-// };
+export const getEstimatedRealValue = async () => {
+    try {
+        const resp = await axios.get(`${BASE_URL}/Listing/advanced`);
+        console.log(resp.data);
+        return resp.data;
+    } catch (err) {
+        console.log(err);
+        console.log(err.message);
+    }
+};
 
 // export const updateEmail = async (userObj) => {
 //     try {
