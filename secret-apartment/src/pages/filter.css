@@ -1,20 +1,22 @@
 .filter-main {
-    width: 80%;
-    border: 1px solid black;
+    width: 77%;
+    border: 18px solid black;
     margin-right: auto;
     margin-left: auto;
     background-color: #EEF1FF;
     border-radius: 5px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
-    margin-top: 1%;
-    padding: 1%;
+    margin-top: 3%;
+    padding: 5% 5% 5% 5%;
 }
 
 .search-filters {
-    margin: 2%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  
-    gap: 2%;
+  display: grid;
+  flex-direction: column;
+    /* margin: 2%;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr;  
+    gap: 2%; */ 
 }
 
 label {
