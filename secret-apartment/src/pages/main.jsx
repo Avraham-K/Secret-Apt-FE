@@ -11,6 +11,7 @@ export default function Main() {
   const [ aggResults, setAggResults ] = useState()
   
   return (
+  
     <center className="Main-Page-Wrapper">
         <Filter/>
         <Card />

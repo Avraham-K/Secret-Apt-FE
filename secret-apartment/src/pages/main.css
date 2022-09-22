@@ -1,6 +1,5 @@
 .Main-Page-Wrapper {
     background-color: #D2DAFF;
-    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     background-image: url('https://img.freepik.com/free-photo/white-blank-concrete-wall-mockup-with-wooden-floor_53876-106171.jpg?w=2000');
@@ -8,7 +7,11 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.main {
+
 }
 
 /* apartment card list */

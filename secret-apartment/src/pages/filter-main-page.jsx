@@ -1,7 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { GlobalContext } from "../context/global-context";
 import { getEstimatedRealValue, searchByNeighborhood } from "../utils/userServices";
+import TextField from "@mui/material/TextField";
+import Select from '@mui/material/Select'
 import "./filter.css";
+import { FormControl, InputLabel } from "@mui/material";
 
 export default function Filter( {setAggResults}) {
   const { neighborhoods, setNeighborhoods, setNeighborRes } = useContext(GlobalContext);
@@ -12,7 +15,6 @@ export default function Filter( {setAggResults}) {
     gimmiBaseNeighborhood()
 }, [neighborhoods])
   
-
 const gimmiBaseNeighborhood = async () => {
    const result = await searchByNeighborhood(neighborhoods)
    setNeighborRes(result);
@@ -51,57 +53,101 @@ const gimmiBaseNeighborhood = async () => {
         <div class="search-filters">
           <label>
             Price Range:
-            <input
-              type="number"
-              placeholder="From:"
-              onChange={(e) => {
-                setQuerys({ ...querys, minPrice: e.target.value });
-              }}
-            />
-            <input
-              type="number"
-              placeholder="To:"
-              onChange={(e) => {
-                setQuerys({ ...querys, maxPrice: e.target.value });
-              }}
-            />
+            <TextField
+                  fullWidth
+                  label="From"
+                  id="fullWidth"
+                  sx={{
+                    color: "success.main",
+                    "& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input":
+                      {
+                        color: "#93B5C6",
+                      },
+                  }}
+                  type="number"
+                  placeholder="From"
+                  onChange={(e) => {
+                    setQuerys({ ...querys, minPrice: e.target.value });
+                  }}
+                />
+               <TextField
+                  fullWidth
+                  className="mt-4"
+                  label="To"
+                  id="fullWidth"
+                  sx={{
+                    color: "success.main",
+                    "& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input":
+                      {
+                        color: "#93B5C6",
+                      },
+                  }}
+                  type="text"
+                  placeholder="To"
+                  onChange={(e) => {
+                    setQuerys({ ...querys, maxPrice: e.target.value });
+                  }}
+                />
           </label>
           <label>
             Minimum Property Size:
-            <input
-              type="number"
-              placeholder="size"
-              onChange={(e) => {
-                setQuerys({ ...querys, size: e.target.value });
-              }}
-            />
+            <TextField
+                  fullWidth
+                  label="Size"
+                  id="fullWidth"
+                  sx={{
+                    color: "success.main",
+                    "& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input":
+                      {
+                        color: "#93B5C6",
+                      },
+                  }}
+                  type="number"
+                  placeholder="Size"
+                  onChange={(e) => {
+                    setQuerys({ ...querys, size: e.target.value });
+                  }}
+                />
           </label>
           <label>
             Number of Rooms
-            <select
-              onChange={(e) => {
-                setQuerys({ ...querys, rooms: e.target.value });
-              }}
-            >
-              <option disabled selected>
-                Select your Number of Rooms
-              </option>
-              <option value="1">1</option>
+          <FormControl variant="filled">
+        <InputLabel htmlFor="filled-age-native-simple">Select Number Of Rooms</InputLabel>
+        <Select
+          native
+          // value={state.age}
+          onChange={(e) => {
+            setQuerys({ ...querys, rooms: e.target.value });
+          }}
+        > 
+         <option disabled value=""></option>
+          <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5 and above</option>
-            </select>
-          </label>
+        </Select>
+      </FormControl>
+      </label>
           <label>
             Parking
-            <input
-              type="number"
-              placeholder="parking"
-              onChange={(e) => {
-                setQuerys({ ...querys, parking: e.target.value });
-              }}
-            />
+            <TextField
+                  fullWidth
+                  label="Parking"
+                  id="fullWidth"
+                  sx={{
+                    color: "success.main",
+                    "& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input":
+                      {
+                        color: "#93B5C6",
+                      },
+                  }}
+                  type="number"
+                  placeholder="Parking"
+                  onChange={(e) => {
+                    setQuerys({ ...querys, parking: e.target.value });
+                  }}
+                />
           </label>
           <label>
             Type of Property
@@ -159,13 +205,23 @@ const gimmiBaseNeighborhood = async () => {
           <label>
             {" "}
             Construction year:
-            <input
-              type="text"
-              placeholder="year"
-              onChange={(e) => {
-                setQuerys({ ...querys, constructionDate: e.target.value });
-              }}
-            />
+            <TextField
+                  fullWidth
+                  label="Year"
+                  id="fullWidth"
+                  sx={{
+                    color: "success.main",
+                    "& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input":
+                      {
+                        color: "#93B5C6",
+                      },
+                  }}
+                  type="text"
+                  placeholder="Year"
+                  onChange={(e) => {
+                    setQuerys({ ...querys, constructionDate: e.target.value });
+                  }}
+                />
           </label>
         </div>
         <button
