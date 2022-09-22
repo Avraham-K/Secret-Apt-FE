@@ -111,16 +111,15 @@ const gimmiBaseNeighborhood = async () => {
           </label>
           <label>
             Number of Rooms
-          <FormControl variant="filled">
+          <FormControl >
         <InputLabel htmlFor="filled-age-native-simple">Select Number Of Rooms</InputLabel>
         <Select
           native
-          // value={state.age}
           onChange={(e) => {
             setQuerys({ ...querys, rooms: e.target.value });
           }}
         > 
-         <option disabled value=""></option>
+         <option disabled selected value=""></option>
           <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -150,13 +149,17 @@ const gimmiBaseNeighborhood = async () => {
                 />
           </label>
           <label>
-            Type of Property
-            <select
-              onChange={(e) => {
-                setQuerys({ ...querys, type: e.target.value });
-              }}
-            >
-              <option disabled selected>
+            Type Of Property
+          <FormControl >
+        <InputLabel htmlFor="filled-age-native-simple">Tyoe Of Property</InputLabel>
+        <Select
+         className="mt-2"
+          native
+          onChange={(e) => {
+            setQuerys({ ...querys, type: e.target.value });
+          }}
+        > 
+      <option disabled selected>
                 Insert Type of Property
               </option>
               <option value="Two-family Conversion">
@@ -167,8 +170,9 @@ const gimmiBaseNeighborhood = async () => {
               <option value="Townhouse Inside Unit">
                 Townhouse Inside Unit
               </option>
-            </select>
-          </label>
+        </Select>
+      </FormControl>
+      </label>
           <label>
             {" "}
             Quality:
