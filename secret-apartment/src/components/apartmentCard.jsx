@@ -3,8 +3,6 @@ import { Button, Card } from "react-bootstrap";
 
 function ApartmentCard(props) {
   const {
-    Neighborhood,
-    Street,
     SalePrice,
     GrLivArea,
     BedroomAbvGr,
@@ -14,12 +12,10 @@ function ApartmentCard(props) {
 
   return (
     <tr>
-      <td>{Neighborhood}</td>
-      <td>{Street}</td>
-      <td>{GrLivArea}</td>
       <td>{BedroomAbvGr}</td>
-      <td>{GarageCars}</td>
       <td>{FullBath}</td>
+      <td>{GrLivArea}</td>
+      <td>{GarageCars}</td>
       <td>{SalePrice}</td>
       <td>1</td>
     </tr>
