@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="landingPageContainer">
       <div className="home-page-header">
-        <h1 className="display-1 mt-4">Secret Apartments</h1>
+        <h1 className="display-1 mt-4 font-main">Secret Apartments</h1>
       </div>
       <div className="home-page-search-container">
         <AutoCompleteInput />
@@ -19,7 +19,6 @@ function Home() {
         </button>
       </div>
       <div className="home-img-container">
-        {/* <img src={logo} alt="house-image" className="home-house-img" /> */}
       </div>
     </div>
   );

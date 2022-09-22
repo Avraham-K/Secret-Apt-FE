@@ -14,9 +14,9 @@ export default function Notification() {
     <>
     <center>
       <div className="Main-Page-Wrapper">
-        <div className=" ">
-          <Filter />
-          <center className='center'>
+        <div className="mt-5">
+          <Filter table={false} />
+          <center className='center mb-4'>
         
           <Form className='formCard'>
             <Form.Group

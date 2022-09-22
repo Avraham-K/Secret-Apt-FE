@@ -5,8 +5,10 @@ import TextField from "@mui/material/TextField";
 import Select from '@mui/material/Select'
 import "./filter.css";
 import { FormControl, InputLabel } from "@mui/material";
+import ApartmentCardList from "../components/apartmentCardList";
 
-export default function Filter( {aggResults, setAggResults}) {
+
+export default function Filter( {setAggResults, table=true}) {
   const { neighborhoods, setNeighborhoods, setNeighborRes } = useContext(GlobalContext);
   const [querys, setQuerys] = useState({
     constructionDate: null,
@@ -51,7 +53,7 @@ const gimmiBaseNeighborhood = async () => {
   };
 
   return (
-    <div class="filter-main">
+    <div class="notification-top filter-main mb-4">
       <form
         id="my-form"
         onSubmit={(e) => {
@@ -60,9 +62,10 @@ const gimmiBaseNeighborhood = async () => {
         }}
       >
         <div class="search-filters">
-          <label>
+          <label >
             Price Range:
             <TextField
+                   className="mt-2"
                   fullWidth
                   label="From"
                   id="fullWidth"
@@ -81,7 +84,7 @@ const gimmiBaseNeighborhood = async () => {
                 />
                <TextField
                   fullWidth
-                  className="mt-4"
+                  className="mt-2"
                   label="To"
                   id="fullWidth"
                   sx={{
@@ -102,6 +105,7 @@ const gimmiBaseNeighborhood = async () => {
             Minimum Property Size:
             <TextField
                   fullWidth
+                  className="mt-2"
                   label="Size"
                   id="fullWidth"
                   sx={{
@@ -120,16 +124,15 @@ const gimmiBaseNeighborhood = async () => {
           </label>
           <label>
             Number of Rooms
-          <FormControl variant="filled">
+          <FormControl >
         <InputLabel htmlFor="filled-age-native-simple">Select Number Of Rooms</InputLabel>
         <Select
           native
-          // value={state.age}
           onChange={(e) => {
             setQuerys({ ...querys, rooms: e.target.value });
           }}
         > 
-         <option disabled value=""></option>
+         <option disabled selected value=""></option>
           <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -141,6 +144,7 @@ const gimmiBaseNeighborhood = async () => {
           <label>
             Parking
             <TextField
+            className="mt-2"
                   fullWidth
                   label="Parking"
                   id="fullWidth"
@@ -159,13 +163,15 @@ const gimmiBaseNeighborhood = async () => {
                 />
           </label>
           <label>
-            Type of Property
-            <select
-              onChange={(e) => {
-                setQuerys({ ...querys, type: e.target.value });
-              }}
-            >
-              <option disabled selected>
+            Type Of Property
+          <FormControl className="mt-2">
+        <Select
+          native
+          onChange={(e) => {
+            setQuerys({ ...querys, type: e.target.value });
+          }}
+        > 
+      <option disabled selected>
                 Insert Type of Property
               </option>
               <option value="Two-family Conversion">
@@ -176,16 +182,18 @@ const gimmiBaseNeighborhood = async () => {
               <option value="Townhouse Inside Unit">
                 Townhouse Inside Unit
               </option>
-            </select>
-          </label>
-          <label>
-            {" "}
-            Quality:
-            <select onChange={(e) => {
-                setQuerys({ ...querys, quality: e.target.value });
-              }}>
-
-            <option disabled selected>Overall Construction Quality</option>
+        </Select>
+      </FormControl>
+      </label>
+      <label>
+           Quality
+          <FormControl className="mt-2">
+        <Select
+          native
+          onChange={(e) => {
+            setQuerys({ ...querys, quality: e.target.value });
+          }}>
+       <option disabled selected>Construction Quality</option>
               <option value="Very Excellent">
               Very Excellent
               </option>
@@ -209,13 +217,15 @@ const gimmiBaseNeighborhood = async () => {
               <option value="Very Poor">
               Very Poor
               </option>
-            </select>
-          </label>
+        </Select>
+      </FormControl>
+      </label>
           <label>
             {" "}
             Construction year:
             <TextField
                   fullWidth
+                  className="mt-2"
                   label="Year"
                   id="fullWidth"
                   sx={{
@@ -242,6 +252,7 @@ const gimmiBaseNeighborhood = async () => {
           Search
         </button>
       </form>
+      {table && <ApartmentCardList />}
     </div>
   );
 }

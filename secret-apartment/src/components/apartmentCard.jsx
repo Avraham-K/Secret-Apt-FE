@@ -21,7 +21,11 @@ function ApartmentCard(props) {
       <td>{GarageCars}</td>
       <td>{marketValue}</td>
       <td style={marketValue > SalePrice ? {color:"#22CC14"} : {color: "#EF233C"}}>{SalePrice}</td>
-      <td style={perchange < 0 ? {color:"#22CC14"} : {color: "#EF233C"}}>{perchange}%</td>
+      <td style={
+
+        perchange<5 && perchange >-5 ? {color:"black"} : perchange < 0 ? {color:"#22CC14"} : {color: "#EF233C"}
+      
+    }>{perchange}% </td>
     </tr>
   );
 }

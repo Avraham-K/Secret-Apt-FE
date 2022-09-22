@@ -10,9 +10,24 @@
     min-height: 100vh;
 }
 
-.main {
-
+.neighborhoods-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 140px;
+    width: 80%;
 }
+
+.neighborhoods-name {
+    margin-top: 70px;
+}
+
+.main-page-autoComplete {
+    margin-top: 70px;
+    transform: translateX(0%);
+    z-index: 1;
+}
+
 
 /* apartment card list */
 .apartment-results-container {
@@ -30,18 +45,18 @@
   
   th,
   td {
-    border: 1px solid #ffffff;
+    border: 1px solid black;
     text-align: center;
     padding: 8px;
     font-size: 20px;
   }
   
   th {
-    background-color: rgb(117, 201, 250);
+  background-color: #eef1ff;
   }
   
   td {
-    background-color: rgb(205, 235, 253);
+    background-color: #eef1ff;
   }
   
 
