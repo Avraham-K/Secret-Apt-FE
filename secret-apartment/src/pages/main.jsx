@@ -4,6 +4,7 @@ import Filter from './filter-main-page'
 import './main.css';
 import { GlobalContext } from "../context/global-context";
 import ApartmentCardList from '../components/apartmentCardList';
+import AutoCompleteInput from "../components/AutoComplete";
 
 
 export default function Main() {
@@ -13,6 +14,12 @@ export default function Main() {
   return (
   
     <center className="Main-Page-Wrapper">
+      <div className='neighborhoods-container'>
+      <h1 className='neighborhoods-name display-6'>{neighborhoods} Neighborhood</h1>
+      <div className='main-page-autoComplete'>
+      <AutoCompleteInput />
+      </div>
+      </div>
         <Filter/>
         <Card />
         <ApartmentCardList />
